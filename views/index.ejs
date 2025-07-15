@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+</head>
+
+<body>
+    <form action="/create" method="POST">
+        <!-- Task Input Section -->
+        <div id="heading">
+            <input id="title-input" type="text" placeholder="Title goes here.." name="title" />
+        </div>
+
+        <div id="description">
+            <textarea id="task-input" placeholder="Write your task details here..." name="task"></textarea>
+            <br />
+            <button id="create-task-btn">Create Task</button>
+        </div>
+        <div id="section">
+            <% if (files.length> 0) { %>
+                <% files.forEach((val)=> { %>
+                    <div class="card">
+                        <h3>
+                            <%= val%>
+                        </h3>
+                        <a href="/files/<%=val%>">Read More.</a>
+                        <a href="/edit/<%=val%>">Edit name</a>
+                    </div>
+                    <% }) %>
+                        <% } else { %>
+                            <h3>No tasks yet</h3>
+                            <% } %>
+        </div>
+    </form>
+</body>
+
+</html>

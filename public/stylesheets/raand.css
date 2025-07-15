@@ -1,0 +1,68 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fira Code', 'Consolas', 'Segoe UI', monospace;
+}
+
+/* Dark Background */
+body {
+    background-color: #0f0f0f;
+    color: #eaeaea;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+    background-image: linear-gradient(to bottom right, #0f0f0f, #1c1c1c);
+}
+
+/* Title */
+h3 {
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+    color: #00ffaa;
+    letter-spacing: 1px;
+    text-shadow: 0 0 5px #00ffaa44;
+}
+
+/* File Content */
+p {
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+    padding: 25px 30px;
+    max-width: 900px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 255, 170, 0.1);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    white-space: pre-wrap;
+    border: 1px solid #00ffaa22;
+    backdrop-filter: blur(2px);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover Glow */
+p:hover {
+    box-shadow: 0 0 25px rgba(0, 255, 170, 0.3);
+}
+
+/* Back Link */
+a {
+    margin-top: 30px;
+    text-decoration: none;
+    color: #111;
+    background-color: #00ffaa;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    background-color: #00cc88;
+    color: #000;
+    box-shadow: 0 0 10px #00ffaa;
+}
