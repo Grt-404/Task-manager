@@ -41,13 +41,13 @@ app.get('/files/:filename', (req, res) => {
             return res.status(404).send('File not found');
         }
 
-        res.render("randi", { fileData, filename: req.params.filename });
+        res.render("show", { fileData, filename: req.params.filename });
     });
 });
 app.get(`/edit/:filename`, (req, res) => {
     res.render("edit", { filename: req.params.filename });
 });
-app.post('/lund', (req, res) => {
+app.post('/rename', (req, res) => {
     const oldPath = path.join(__dirname, 'files', req.body.previous);
     const newPath = path.join(__dirname, 'files', req.body.updated);
 
