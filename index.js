@@ -59,6 +59,20 @@ app.post('/rename', (req, res) => {
         res.redirect('/');
     });
 });
+app.get(`/delete/:filename`, (req, res) => {
+    res.render("delete", { filename: req.params.filename });
+})
+app.post(`/delete/:filename`, (req, res) => {
+    const deletepath = path.join(__dirname, 'files', `${req.params.filename}`);
+    fs.unlink(`${deletepath}`, (err) => {
+        if (err) {
+            console.error("THERE OCCURED AN ERROR IN DELETION:", err);
+            return res.status(500).send("CANNOT DELETE");
+        }
+        res.redirect('/');
+
+    })
+})
 
 
 // Start server

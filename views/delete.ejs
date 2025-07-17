@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>delete file conformation</title>
+    <link rel="stylesheet" href="/stylesheets/style_3.css">
+</head>
+
+<body>
+    <h1>Are you sure you want to delete the file?</h1>
+    <form action="/delete/<%=filename%>" method="POST">
+        <button id="yes" name="delete">yes</button>
+        <a href="/">No</a>
+    </form>
+</body>
+
+</html>

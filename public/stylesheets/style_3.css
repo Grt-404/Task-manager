@@ -1,0 +1,59 @@
+/* Apply base dark theme */
+body {
+    background-color: #121212;
+    color: #f0f0f0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Heading */
+h1 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #ff6666;
+}
+
+/* Form layout */
+form {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+/* Button styling */
+button#yes {
+    background-color: #e53935;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button#yes:hover {
+    background-color: #d32f2f;
+}
+
+/* "No" link styling */
+a {
+    text-decoration: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    color: #ffffff;
+    border: 1px solid #555;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    background-color: #333;
+    border-color: #888;
+}

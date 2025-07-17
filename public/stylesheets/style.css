@@ -53,7 +53,7 @@ button:hover {
     box-shadow: 0 0 12px rgba(0, 255, 170, 0.4);
 }
 
-/* TASK SECTION */
+/* SECTION */
 #section {
     display: flex;
     flex-wrap: wrap;
@@ -62,16 +62,20 @@ button:hover {
     padding: 30px 0;
 }
 
-/* TASK CARD */
+/* CARD */
 .card {
     background: linear-gradient(145deg, #1a1a1a, #111111);
     padding: 20px;
     border-radius: 12px;
-    width: 260px;
+    width: 280px;
     color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
     box-shadow: 0 6px 20px rgba(0, 255, 170, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid #2c2c2c;
+    word-wrap: break-word;
 }
 
 .card:hover {
@@ -81,20 +85,53 @@ button:hover {
 
 .card h3 {
     font-size: 1.15rem;
-    margin-bottom: 12px;
-    font-weight: 600;
     color: #00ffaa;
     text-shadow: 0 0 2px #00ffaa33;
+    margin-bottom: 6px;
+}
+
+.card p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #cccccc;
 }
 
 .card a {
     color: #00ffaa;
     text-decoration: none;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     transition: color 0.2s ease;
+    word-break: break-word;
 }
 
 .card a:hover {
     text-decoration: underline;
     color: #00cc88;
+}
+
+/* TAGS INSIDE CARD (e.g., for labels or categories) */
+.card .tag {
+    background-color: #222;
+    border: 1px solid #444;
+    color: #00ffaa;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    display: inline-block;
+    margin: 2px 4px 0 0;
+}
+
+/* BUTTONS INSIDE CARD */
+.card button {
+    margin-top: 8px;
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    width: fit-content;
+}
+
+/* Responsive tweak */
+@media (max-width: 600px) {
+    .card {
+        width: 100%;
+    }
 }
